@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import clsx from 'clsx'
 
-export function Logomark({ invert = false, filled = false, ...props }: { invert?: boolean; filled?: boolean }) {
+export function Logomark({ className , invert = false, filled = false, ...props }: { className?: string, invert?: boolean, filled?: boolean }) {
   const id = useId()
 
   return (
