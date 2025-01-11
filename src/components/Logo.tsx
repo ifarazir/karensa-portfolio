@@ -9,6 +9,7 @@ export function Logomark({ className, preserveAspectRatio, invert = false, fille
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 220.23 259.55"
       className={clsx(className)}
+      preserveAspectRatio={preserveAspectRatio}
       {...props}
     >
       <rect
