@@ -16,7 +16,7 @@ interface Project {
   link: string;
 }
 
-export const projects = [
+const projects = [
   {
     index: 10,
     title: "شرکت کاهنربا",
@@ -36,6 +36,24 @@ export const projects = [
     link: "https://shahanceremony.com/",
   },
   {
+    index: 18,
+    title: "Fundracing",
+    year: 1403,
+    description: "فاندریسینگ یک تیم بین المللی تشکیل شده از افراد با تجربه در بازار مالی است که سرمایه مورد نیاز تریدر ها را تامین کرده و از تریدر های برتر و با استعداد حمایت میکنید.",
+    technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi","Server optimization"],
+    image: "/images/projects/fundracing-mockup.jpg",
+    link: "https://web.archive.org/web/20240622024127/fundracing.co",
+  },
+  {
+    index: 19,
+    title: "پت‌شاپ زنجیره‌ای ژیوان",
+    year: 1403,
+    description: "پت‌شاپ ژیوان با شعار «ژیوان، دوست حیوان و انسان»، به‌عنوان بزرگ‌ترین فروشگاه ملزومات و غذای حیوانات‌خانگی در ایران با همفکری و کارشناسی تیمی باتجربه و دوستدار محیط‌زیست و حیوانات، اولین شعبه‌ی خود را در سال 1394 در خیابان ولی‌عصر تهران تأسیس کرد و در مدتی کوتاه",
+    technologies: ["Wordpress", "SEO", "PHP", "Server optimization"],
+    image: "/images/projects/zivan-mockup.jpg",
+    link: "https://zivanpetshop.com/",
+  },
+  {
     index: 20,
     title: "Omnicart",
     title_badge: "v2",
@@ -44,6 +62,24 @@ export const projects = [
     technologies: ["Next.js", "Tailwind", "FramerMotion", "SEO"],
     image: "/images/projects/omnicart-v2.jpg",
     link: "https://web.archive.org/web/20240920054405/https://omnicart.tech/",
+  },
+  {
+    index: 28,
+    title: "صرافی کیوسک",
+    year: 1402,
+    description: "صرافی کیوسک محصول شرکت کیمیاگران سرمایه همراه ایرانیان است. این صرافی در سال 1400 فعالیت خود را در شهر تهران آغاز کرد. بر اساس اطلاعات درج شده در سایت رسمی صرافی کیوسک، این صرافی بیش از 200 هزار کاربر فعال دارد. همچنین اپلیکیشن موبایل اندروید و iOS این صرافی هم در دسترس کاربران است.",
+    technologies: ["React", "Tailwind", "ReactRouter", "Server Optimization"],
+    image: "/images/projects/kiosk-mockup.jpg",
+    link: "https://kioosk.net/",
+  },
+  {
+    index: 29,
+    title: "رستوران آپادانا اتریش",
+    year: 1402,
+    description: "رستوران آپادانا فضایی دنج، گرم و آرام دارد و در شهر وین اتریش واقع شده است. در این رستوران انواع غذاهای حلال خوشمزه از جمله گریل، کباب، برنج زعفرانی، کورما، مرغ کبابی و بسیاری از غذاهای خوشمزه دیگر ارائه می شود",
+    technologies: ["Wordpress", "Elementor"],
+    image: "/images/projects/apadana-mockup.jpg",
+    link: "http://apadana.at/",
   },
   {
     index: 30,
