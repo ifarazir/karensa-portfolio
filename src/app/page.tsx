@@ -157,7 +157,7 @@ const projects = [
 ] as Project[];
 
 export default function Home() {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  // const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   return (
     <div className="w-full">
