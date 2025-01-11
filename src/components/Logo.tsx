@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import clsx from 'clsx'
 
-export function Logomark({ invert = false, filled = false, ...props }) {
+export function Logomark({ invert = false, filled = false, ...props }: { invert?: boolean; filled?: boolean }) {
   const id = useId()
 
   return (
@@ -71,6 +71,11 @@ export function Logo({
   filled = false,
   fillOnHover = false,
   ...props
+}: {
+  className?: string
+  invert?: boolean
+  filled?: boolean
+  fillOnHover?: boolean
 }) {
   return (
     <svg
