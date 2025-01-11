@@ -3,7 +3,6 @@
 import { Logomark } from "@/components/Logo";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 interface Project {
   index: number;
