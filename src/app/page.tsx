@@ -35,11 +35,30 @@ const projects = [
     link: "https://shahanceremony.com/",
   },
   {
+    index: 12,
+    title: "اپلیکیشن اندروید وی وین",
+    title_badge: "v2",
+    year: "بزودی",
+    description: "وی وی شبکه گسترده فعالان حوزه ورزش و سلامت است و به شما این امکان رو میده که برای رسیدن به اهداف ورزشیتون نزدیکترین و بهترین انتخاب رو داشته باشید.",
+    technologies: ["Android Development", "Laravel", "RESTapi"],
+    image: "/images/projects/viwin-mockup.jpg",
+    link: "https://viwin.link/",
+  },
+  {
+    index: 13,
+    title: "نرم افزار مدیریت پروژه زیکس",
+    year: "بزودی",
+    description: "شرکت زیکس با سابقه چندین ساله فعال در زمینه تولید انواع مبلمان و اکسسوری های خاص واقع در منطقه صنعتی سیاهسنگ",
+    technologies: ["Laravel", "NextJS", "GraphQL", "MySQL", "Tailwind CSS"],
+    image: "/images/projects/zix-mockup.jpg",
+    link: "#",
+  },
+  {
     index: 18,
     title: "Fundracing",
     year: 1403,
     description: "فاندریسینگ یک تیم بین المللی تشکیل شده از افراد با تجربه در بازار مالی است که سرمایه مورد نیاز تریدر ها را تامین کرده و از تریدر های برتر و با استعداد حمایت میکنید.",
-    technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi","Server optimization"],
+    technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi", "Server optimization"],
     image: "/images/projects/fundracing-mockup.jpg",
     link: "https://web.archive.org/web/20240622024127/fundracing.co",
   },
@@ -58,12 +77,22 @@ const projects = [
     title_badge: "v2",
     year: 1403,
     description: "Omnicart یک راه حل همه کاره است که به شما کمک می کند تجارت پذیرایی خود را توسعه دهید، عملیات را ساده کنید و سود خود را حفظ کنید.",
-    technologies: ["Next.js", "Tailwind", "FramerMotion", "SEO"],
+    technologies: ["NextJS", "Tailwind", "FramerMotion", "SEO"],
     image: "/images/projects/omnicart-v2.jpg",
     link: "https://web.archive.org/web/20240920054405/https://omnicart.tech/",
   },
   {
-    index: 27,
+    index: 21,
+    title: "اپلیکیشن iOS وی وین",
+    title_badge: "v2",
+    year: 1402,
+    description: "وی وی شبکه گسترده فعالان حوزه ورزش و سلامت است و به شما این امکان رو میده که برای رسیدن به اهداف ورزشیتون نزدیکترین و بهترین انتخاب رو داشته باشید.",
+    technologies: ["NextJS", "iOS Development", "Laravel", "RESTapi", "Server Optimization"],
+    image: "/images/projects/viwin-ios.jpg",
+    link: "https://viwin.link/",
+  },
+  {
+    index: 22,
     title: "صرافی کیوسک",
     year: 1402,
     description: "صرافی کیوسک محصول شرکت کیمیاگران سرمایه همراه ایرانیان است. این صرافی در سال 1400 فعالیت خود را در شهر تهران آغاز کرد. بر اساس اطلاعات درج شده در سایت رسمی صرافی کیوسک، این صرافی بیش از 200 هزار کاربر فعال دارد. همچنین اپلیکیشن موبایل اندروید و iOS این صرافی هم در دسترس کاربران است.",
@@ -72,7 +101,7 @@ const projects = [
     link: "https://kioosk.net/",
   },
   {
-    index: 28,
+    index: 23,
     title: "زینوم",
     year: 1402,
     description: "سرویس زینوم با هدف کاهش سرعت پیر شدن (aging) و افزایش عمر سالم شما طراحی شده است.",
@@ -81,7 +110,7 @@ const projects = [
     link: "https://zeenome.ir/",
   },
   {
-    index: 29,
+    index: 24,
     title: "رستوران آپادانا اتریش",
     year: 1402,
     description: "رستوران آپادانا فضایی دنج، گرم و آرام دارد و در شهر وین اتریش واقع شده است. در این رستوران انواع غذاهای حلال خوشمزه از جمله گریل، کباب، برنج زعفرانی، کورما، مرغ کبابی و بسیاری از غذاهای خوشمزه دیگر ارائه می شود",
@@ -104,7 +133,7 @@ const projects = [
     title_badge: "v1",
     year: 1401,
     description: "Omnicart یک راه حل همه کاره است که به شما کمک می کند تجارت پذیرایی خود را توسعه دهید، عملیات را ساده کنید و سود خود را حفظ کنید.",
-    technologies: ["Next.js", "Tailwind", "FramerMotion", "SEO"],
+    technologies: ["NextJS", "Tailwind", "FramerMotion", "SEO"],
     image: "/images/projects/omnicart-v1.jpg",
     link: "https://web.archive.org/web/20230402150800/https://omnicart.tech/",
   },
@@ -127,7 +156,16 @@ const projects = [
     link: "https://finupevent.ir/",
   },
   {
-    index: 51,
+    index: 52,
+    title: "مجله صرافی فینیکس",
+    year: 1400,
+    description: "صرافی فینیکس یک بازار مبادلات ارزهای دیجیتال است. در این صرافی معاملات بدون واسطه، و بصورت P2P یا همتا به همتا انجام می‌شود.",
+    technologies: ["Wordpress", "SEO"],
+    image: "/images/projects/finup-mockup.jpg",
+    link: "https://finupevent.ir/",
+  },
+  {
+    index: 53,
     title: "کیارش مسیبی",
     year: 1400,
     description: " مسیبی متولد ۱۳۶۹ عضو انجمن عکاسان ایران و انجمن عکاسان خانه تئاتر است. در اردیبهشت ۱۳۹۶ تندیس بهترین عکس بیستمین جشنواره تئاتر دانشگاهی را دریافت کرد. در سال ۱۳۹۴ مقام دوم، سی و چهارمین جشنواره بین المللی عکس تئاتر فجر را کسب کرد. در مرداد ۱۳۹۴ کاندید دریافت جایزه از انجمن منتقدان و نویسندگان تئاتر در بخش عکس بود. او پس از شرکت در بیش از بیست نمایشگاه گروهی و تجربه عکاسی برای مطبوعات، اولین نمایشگاه انفرادی خود را برگزار کرده است.",
@@ -161,6 +199,15 @@ const projects = [
     technologies: ["Wordpress", "Elementor"],
     image: "/images/projects/behinepardazan-mockup.jpg",
     link: "https://web.archive.org/web/20221120051926/https://www.behinepardazan.ir/",
+  },
+  {
+    index: 81,
+    title: "آوید فوم",
+    year: 1399,
+    description: "آوید فوم یک تولید کننده داخلی بردهای فومی است که محصولاتش در طیف گسترده ای از زمینه ها از قبیل چاپ دیجیتال ، چاپ مسطح ، استندهای تبلیغاتی نمایشگاهی و فروشگاهی ، برش گرافیکی و علائم در محیط های داخلی استفاده می شود.",
+    technologies: ["Wordpress", "Site Optimization"],
+    image: "/images/projects/avid-mockup.jpg",
+    link: "https://avidfoam.ir/",
   },
   {
     index: 90,
@@ -224,26 +271,50 @@ export default function Home() {
             projects.sort((a, b) => a.index - b.index).map((project, index) => (
               <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group" key={index}>
                 <div className="p-4">
-                  <Link href={project.link} target="_blank">
-                    <div className="overflow-hidden rounded-lg">
-                      <Image src={project.image} alt={project.title} width={1280} height={832} className="group-hover:scale-105 transition-all duration-500" />
-                    </div>
-                  </Link>
+                  {
+                    project.link == "#" ? (
+                      <div className="overflow-hidden rounded-lg">
+                        <Image src={project.image} alt={project.title} width={1280} height={832} className="group-hover:scale-105 transition-all duration-500" />
+                      </div>
+                    ) :
+                      <Link href={project.link} target="_blank">
+                        <div className="overflow-hidden rounded-lg">
+                          <Image src={project.image} alt={project.title} width={1280} height={832} className="group-hover:scale-105 transition-all duration-500" />
+                        </div>
+                      </Link>
+                  }
                 </div>
                 <div className="flex flex-col space-y-1.5 p-6 pt-0 pb-3">
                   <h3 className="text-2xl font-bold leading-none tracking-tight">
                     <div className="flex gap-2 items-center justify-between">
-                      <Link href={project.link} target="_blank" className="flex items-start">
-                        {project.title}
-                        {
-                          project.title_badge && (
-                            <span
-                              className="inline-flex tracking-widest items-center rounded-full border px-2 py-px -pb-0 scale-90 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground">
-                              {project.title_badge}
-                            </span>
-                          )
-                        }
-                      </Link>
+                      {
+                        project.link == "#" ? (
+                          <div className="flex items-start">
+                            {project.title}
+                            {
+                              project.title_badge && (
+                                <span
+                                  className="inline-flex tracking-widest items-center rounded-full border px-2 py-px -pb-0 scale-90 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground">
+                                  {project.title_badge}
+                                </span>
+                              )
+                            }
+                          </div>
+                        ) : (
+                          <Link href={project.link} target="_blank" className="flex items-start">
+                            {project.title}
+                            {
+                              project.title_badge && (
+                                <span
+                                  className="inline-flex tracking-widest items-center rounded-full border px-2 py-px -pb-0 scale-90 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground">
+                                  {project.title_badge}
+                                </span>
+                              )
+                            }
+                          </Link>
+
+                        )
+                      }
 
                       <div
                         className="faNum inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">{project.year}</div>
