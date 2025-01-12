@@ -85,7 +85,7 @@ const projects = [
         index: 30,
         title: "فلی",
         description: "ما در تلاش هستیم تا تجربه‌ای را ارائه دهیم که ماهیت لباس‌های ژاپنی ساده، راحت، جادار و کاربردی را در بر گیرد.",
-        technologies: ["Wordpress", "SEO", "PHP", "Server optimization"],
+        technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
         image: "/images/projects/feli-mockup.jpg",
         link: "https://feli.club/",
       },
