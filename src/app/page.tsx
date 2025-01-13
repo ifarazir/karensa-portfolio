@@ -360,7 +360,7 @@ export default function Home() {
                 </div>
                 {
                   year.projects.sort((a, b) => a.index - b.index).map((project, index2) => (
-                    <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group" key={index2}>
+                    <div className="col-span-2 md:col-span-1 rounded-lg border bg-card text-card-foreground shadow-sm h-full group" key={index2}>
                       <div className="p-4">
                         {
                           project.link == "#" ? (
