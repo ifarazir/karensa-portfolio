@@ -67,14 +67,6 @@ const projects = [
     projects: [
       {
         index: 10,
-        title: "Fundracing",
-        description: "فاندریسینگ یک تیم بین المللی تشکیل شده از افراد با تجربه در بازار مالی است که سرمایه مورد نیاز تریدر ها را تامین کرده و از تریدر های برتر و با استعداد حمایت میکنید.",
-        technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi", "Server optimization"],
-        image: "/images/projects/fundracing-mockup.jpg",
-        link: "https://web.archive.org/web/20240622024127/fundracing.co",
-      },
-      {
-        index: 20,
         title: "پت‌شاپ زنجیره‌ای ژیوان",
         description: "پت‌شاپ ژیوان با شعار «ژیوان، دوست حیوان و انسان»، به‌عنوان بزرگ‌ترین فروشگاه ملزومات و غذای حیوانات‌خانگی در ایران با همفکری و کارشناسی تیمی باتجربه و دوستدار محیط‌زیست و حیوانات، اولین شعبه‌ی خود را در سال 1394 در خیابان ولی‌عصر تهران تأسیس کرد و در مدتی کوتاه",
         technologies: ["Wordpress", "SEO", "PHP", "Server optimization"],
@@ -82,12 +74,20 @@ const projects = [
         link: "https://zivanpetshop.com/",
       },
       {
-        index: 30,
+        index: 20,
         title: "اپلیکیشن دنیلی",
         description: "«دنیلی» نماینده ی کوچک و موفقی از مهد دنیای مد و زیبایی، ایتالیا است. دنیلی برندی است که توانسته به خوبی ترندهای روز دنیا و هنر اصیل ایتالیایی را همراه کند و با شناخت نیاز مردم، محصولاتی جذاب و خاص طراحی کند.",
         technologies: ["Android", "iOS", "Cloud Solutions", "RESTapi", "Laravel"],
         image: "/images/projects/daniellee-mockup.jpg",
         link: "#",
+      },
+      {
+        index: 30,
+        title: "CRM مجموعه الهیه ۳۳",
+        description: "نرم افزار مدیریت مشتریان طلا با اتصال مستقیم به اسنپ فود و همگام سازی با دستگاه‌های مجموعه شیرینی‌فروشی‌های زنجیره‌ای الهیه ۳۳، ارتباط با مجموعه با مشتری و فروش روزانه مجموعه فوق را بهبود بخشیده است.",
+        technologies: ["NextJS", "Shadcn/ui", "ElasticSearch", "RadixUi", "PHP"],
+        image: "/images/projects/e33-mockup.jpg",
+        link: "https://web.archive.org/web/20240622024127/fundracing.co",
       },
       {
         index: 40,
@@ -100,6 +100,14 @@ const projects = [
       },
       {
         index: 50,
+        title: "Fundracing",
+        description: "فاندریسینگ یک تیم بین المللی تشکیل شده از افراد با تجربه در بازار مالی است که سرمایه مورد نیاز تریدر ها را تامین کرده و از تریدر های برتر و با استعداد حمایت میکنید.",
+        technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi", "Server optimization"],
+        image: "/images/projects/fundracing-mockup.jpg",
+        link: "https://web.archive.org/web/20240622024127/fundracing.co",
+      },
+      {
+        index: 60,
         title: "فلی",
         description: "ما در تلاش هستیم تا تجربه‌ای را ارائه دهیم که ماهیت لباس‌های ژاپنی ساده، راحت، جادار و کاربردی را در بر گیرد.",
         technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
@@ -107,7 +115,7 @@ const projects = [
         link: "https://feli.club/",
       },
       {
-        index: 60,
+        index: 70,
         title: "پتروکلین",
         description: "این شرکت فعالیت خود را از همان سال شروع و با نام تجاری “پتروکلین” تولیدات متنوعی را در بازار عرضه کرد. شایان ذکر است پتروکلین اولین تولید کننده پلاستیک‌های تجزیه پذیر در کشور است.",
         technologies: ["Wordpress", "Elementor", "SEO"],
@@ -115,7 +123,7 @@ const projects = [
         link: "https://petroclean.co/",
       },
       {
-        index: 70,
+        index: 80,
         title: "کافه آرت استوریج",
         description: "کافه گالری فعال در شهر تهران محدوده فلسطین که از سال ۱۴۰۳ فعالیت خود را آغاز کرده است.",
         technologies: ["NextJS", "Tailwind", "PayloadCMS", "PWA"],
@@ -327,7 +335,7 @@ export default function Home() {
             <Logomark invert filled className={"h-8"} />
             <div className="flex flex-col">
               <p className="text-xs font-normal">استودیو کارنسا</p>
-              <p className="text-base -mt-px">نمونه کارها</p>
+              <p className="text-xl font-bold">Karensa Studio</p>
             </div>
           </Link>
           <div
