@@ -36,11 +36,11 @@ const projects = [
       },
       {
         index: 20,
-        title: "گروه تشریفات شاهان",
-        description: "شرکت فعال در حوزه تشریفات و مراسم عروسی با تجربه چند دهده در این  زمینه و فعال در کشور های ترکیه، امارات و ایران.",
-        technologies: ["Wordpress", "Elementor"],
-        image: "/images/projects/shahan-mockup.jpg",
-        link: "https://shahanceremony.com/",
+        title: "برشته کاری قهوه ON&ON",
+        description: "ارائه جریانی بی‌وقفه از کیفیت و طعم، در محیطی آموزشی که همه بتوانند سلیقه‌ی ویژه و سفر منحصر به فرد خود را در دنیای قهوه کشف کنند.",
+        technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
+        image: "/images/projects/onandon-mockup.jpg",
+        link: "#",
       },
       {
         index: 30,
@@ -87,7 +87,7 @@ const projects = [
         description: "نرم افزار مدیریت مشتریان طلا با اتصال مستقیم به اسنپ فود و همگام سازی با دستگاه‌های مجموعه شیرینی‌فروشی‌های زنجیره‌ای الهیه ۳۳، ارتباط با مجموعه با مشتری و فروش روزانه مجموعه فوق را بهبود بخشیده است.",
         technologies: ["NextJS", "Shadcn/ui", "ElasticSearch", "RadixUi", "PHP"],
         image: "/images/projects/e33-mockup.jpg",
-        link: "https://web.archive.org/web/20240622024127/fundracing.co",
+        link: "#",
       },
       {
         index: 40,
@@ -100,6 +100,14 @@ const projects = [
       },
       {
         index: 50,
+        title: "قهوه فروشی هایک",
+        description: "گروه هایک با استفاده از بهترین دانه‌های‌ قهوه‌ و به‌روزترین تکنیک‌های برشته‌کاری، سعی دارد تا شما هارمونی منحصربه‌فرد  طعم‌ها را در فنجان قهوه‌ی خود تجربه کنید.",
+        technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
+        image: "/images/projects/hayk-mockup.jpg",
+        link: "https://hayk.coffee",
+      },
+      {
+        index: 60,
         title: "Fundracing",
         description: "فاندریسینگ یک تیم بین المللی تشکیل شده از افراد با تجربه در بازار مالی است که سرمایه مورد نیاز تریدر ها را تامین کرده و از تریدر های برتر و با استعداد حمایت میکنید.",
         technologies: ["NextJS", "Shadcn/ui", "SEO", "RadixUi", "Server optimization"],
@@ -107,7 +115,7 @@ const projects = [
         link: "https://web.archive.org/web/20240622024127/fundracing.co",
       },
       {
-        index: 60,
+        index: 70,
         title: "فلی",
         description: "ما در تلاش هستیم تا تجربه‌ای را ارائه دهیم که ماهیت لباس‌های ژاپنی ساده، راحت، جادار و کاربردی را در بر گیرد.",
         technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
@@ -115,7 +123,7 @@ const projects = [
         link: "https://feli.club/",
       },
       {
-        index: 70,
+        index: 80,
         title: "پتروکلین",
         description: "این شرکت فعالیت خود را از همان سال شروع و با نام تجاری “پتروکلین” تولیدات متنوعی را در بازار عرضه کرد. شایان ذکر است پتروکلین اولین تولید کننده پلاستیک‌های تجزیه پذیر در کشور است.",
         technologies: ["Wordpress", "Elementor", "SEO"],
@@ -123,7 +131,15 @@ const projects = [
         link: "https://petroclean.co/",
       },
       {
-        index: 80,
+        index: 90,
+        title: "گروه تشریفات شاهان",
+        description: "شرکت فعال در حوزه تشریفات و مراسم عروسی با تجربه چند دهده در این  زمینه و فعال در کشور های ترکیه، امارات و ایران.",
+        technologies: ["Wordpress", "Elementor"],
+        image: "/images/projects/shahan-mockup.jpg",
+        link: "https://shahanceremony.com/",
+      },
+      {
+        index: 100,
         title: "کافه آرت استوریج",
         description: "کافه گالری فعال در شهر تهران محدوده فلسطین که از سال ۱۴۰۳ فعالیت خود را آغاز کرده است.",
         technologies: ["NextJS", "Tailwind", "PayloadCMS", "PWA"],
