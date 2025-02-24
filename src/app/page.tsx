@@ -40,7 +40,7 @@ const projects = [
         description: "ارائه جریانی بی‌وقفه از کیفیت و طعم، در محیطی آموزشی که همه بتوانند سلیقه‌ی ویژه و سفر منحصر به فرد خود را در دنیای قهوه کشف کنند.",
         technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
         image: "/images/projects/onandon-mockup.jpg",
-        link: "#",
+        link: "https://onandonroastery.com/",
       },
       {
         index: 30,
@@ -132,6 +132,14 @@ const projects = [
       },
       {
         index: 90,
+        title: "تهران زین",
+        description: "تهران زین در سال ۱۴۰۰ با هدف فراهم کردن امکان تولید و نشر “زین” به عنوان رسانه‌ای شناخته شده و پر اهمیت در جهان برای هنرمندان جوان ایرانی بنا نهاده شد.",
+        technologies: ["Wordpress", "Elementor"],
+        image: "/images/projects/tehranzine-mockup.jpg",
+        link: "https://beta.tehranzine.com/",
+      },
+      {
+        index: 100,
         title: "گروه تشریفات شاهان",
         description: "شرکت فعال در حوزه تشریفات و مراسم عروسی با تجربه چند دهده در این  زمینه و فعال در کشور های ترکیه، امارات و ایران.",
         technologies: ["Wordpress", "Elementor"],
@@ -139,7 +147,7 @@ const projects = [
         link: "https://shahanceremony.com/",
       },
       {
-        index: 100,
+        index: 110,
         title: "کافه آرت استوریج",
         description: "کافه گالری فعال در شهر تهران محدوده فلسطین که از سال ۱۴۰۳ فعالیت خود را آغاز کرده است.",
         technologies: ["NextJS", "Tailwind", "PayloadCMS", "PWA"],
