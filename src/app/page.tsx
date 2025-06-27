@@ -28,6 +28,25 @@ const projects = [
     projects: [
       {
         index: 10,
+        title: "استودیو برابر",
+        description:
+          "« شرکت عمران و معماری برابر » شرکت برابر حاصل بیش از ۱۵ سال تفکر در خلق آثار متمایز و منحصر به فرد است و تلاش کرده در زمینه نوآوری در طراحی و ساخت همواره سرآمد باشد. ",
+        technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
+        image: "/images/projects/barabar-mockup.jpg",
+        link: "https://barabargroups.com/",
+      },
+      {
+        index: 20,
+        title: "پتروکلین",
+        title_badge: "v2",
+        description:
+          "این شرکت فعالیت خود را از همان سال شروع و با نام تجاری “پتروکلین” تولیدات متنوعی را در بازار عرضه کرد. شایان ذکر است پتروکلین اولین تولید کننده پلاستیک‌های تجزیه پذیر در کشور است.",
+        technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
+        image: "/images/projects/petroclean-mockup-v2.jpg",
+        link: "#",
+      },
+      {
+        index: 30,
         title: "شرکت کاهنربا",
         description:
           "شرکت کاهنربا بعنوان شرکت پیشرو گامهای بلندی در راستای بومی سازی تکنولوژی های استخراج و فرآوری مواد معدنی برداشته است.",
@@ -36,8 +55,8 @@ const projects = [
         link: "https://kahanroba.com/",
       },
       {
-        index: 20,
-        title: "وبسایت گروه مبلمان زیکس",
+        index: 40,
+        title: "گروه مبلمان زیکس",
         description:
           "شرکت زیکس با سابقه چندین ساله فعال در زمینه تولید انواع مبلمان و اکسسوری های خاص با هدف معرفی محصولات خود در سطح وب و ارائه خدمات به مشتریان خود، اقدام به طراحی و پیاده سازی وبسایت خود کرده است.",
         technologies: ["Wordpress", "Elementor"],
