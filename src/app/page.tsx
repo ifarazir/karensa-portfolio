@@ -66,6 +66,30 @@ const projects = [
     ],
   },
   {
+    index: 150,
+    title: "1404",
+    projects: [
+      {
+        index: 10,
+        title: "برشته کاری قهوه ON&ON",
+        description:
+          "ارائه جریانی بی‌وقفه از کیفیت و طعم، در محیطی آموزشی که همه بتوانند سلیقه‌ی ویژه و سفر منحصر به فرد خود را در دنیای قهوه کشف کنند.",
+        technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
+        image: "/images/projects/onandon-mockup.jpg",
+        link: "https://onandonroastery.com/",
+      },
+      {
+        index: 20,
+        title: "نرم افزار ERP هلدینگ دیوینا",
+        description:
+          "هلدینگ دیوینا متشکل از مجموعه‌های زنجیره‌ای فعال در حوزه پوزشاک و رستوران لوکس به صورت تخصصی در محدوده فرشته تهران فعالیت دارد.",
+        technologies: ["Odoo", "Python", "JavaScript", "Owl", "VanillaJS"],
+        image: "/images/projects/divina-mockup.jpg",
+        link: "#",
+      },
+    ],
+  },
+  {
     index: 200,
     title: "1403",
     projects: [
@@ -94,15 +118,6 @@ const projects = [
         link: "#",
       },
       {
-        index: 30,
-        title: "برشته کاری قهوه ON&ON",
-        description:
-          "ارائه جریانی بی‌وقفه از کیفیت و طعم، در محیطی آموزشی که همه بتوانند سلیقه‌ی ویژه و سفر منحصر به فرد خود را در دنیای قهوه کشف کنند.",
-        technologies: ["Wordpress", "SEO", "Elementor", "Server optimization"],
-        image: "/images/projects/onandon-mockup.jpg",
-        link: "https://onandonroastery.com/",
-      },
-      {
         index: 40,
         title: "Omnicart",
         title_badge: "v2",
@@ -119,7 +134,7 @@ const projects = [
         description:
           "وی وی شبکه گسترده فعالان حوزه ورزش و سلامت است و به شما این امکان رو میده که برای رسیدن به اهداف ورزشیتون نزدیکترین و بهترین انتخاب رو داشته باشید.",
         technologies: ["Android", "Laravel", "RESTapi"],
-        image: "/images/projects/viwin-mockup.jpg",
+        image: "/images/projects/viwin-android-mockup.jpg",
         link: "https://viwin.link/",
       },
       {
