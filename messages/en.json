@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Karensa Studio",
+    "description": "Portfolio"
+  },
+  "nav": {
+    "website": "Studio Website",
+    "process": "Collaboration Process",
+    "contact": "Contact Us"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Showcasing technologies used and project activities"
+  },
+  "years": {
+    "ongoing": "Ongoing",
+    "1404": "2025",
+    "1403": "2024",
+    "1402": "2023",
+    "1401": "2022",
+    "1400": "2021",
+    "1399": "2020",
+    "1398": "2019",
+    "1395": "2016",
+    "1394": "2015"
+  },
+  "studioInfo": {
+    "name": "Software Development Studio",
+    "englishName": "Karensa Studio"
+  }
+}

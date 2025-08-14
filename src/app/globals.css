@@ -83,6 +83,22 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* LTR/RTL Support */
+  [dir="ltr"] {
+    text-align: left;
+  }
+
+  [dir="rtl"] {
+    text-align: right;
+  }
+
+  /* Persian font features for RTL */
+  [dir="rtl"] .faNum {
+    --variable-fa-num: 1;
+    font-variation-settings: "DOTS" var(--variable-dot);
+    font-feature-settings: "ss01" var(--variable-fa-num), "ss02" var(--variable-kaf-swash), "ss03" var(--variable-reversed-yeh), "ss06" var(--variable-stylistic-currency), "ss07" var(--variable-align-numbers);
+  }
 }
 
 .stylistic-dot {
