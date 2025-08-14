@@ -3,7 +3,7 @@
 import { Logomark } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { projectsData } from "@/data/projects";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import Image from "next/image";
 import Link from "next/link";

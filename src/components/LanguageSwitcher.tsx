@@ -1,8 +1,6 @@
 'use client';
 
-import { useLocale } from 'next-intl';
 import { locales } from '@/i18n/request';
-import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
 
 export default function LanguageSwitcher() {

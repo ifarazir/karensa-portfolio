@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { locales } from "@/i18n/request";
+import { locales, type Locale } from "@/i18n/request";
 
 const YekanBakh = localFont({
   src: "../../fonts/YekanBakh-VF.woff",
   variable: "--font-yekan-bakh",
   weight: "100 950",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
 });
 
 type Props = {
@@ -52,7 +46,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
@@ -60,11 +54,10 @@ export default async function LocaleLayout({
   const messages = await getMessages({locale});
 
   const isRTL = locale === "fa";
-  const fontClass = YekanBakh.variable;
 
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <body className={`${fontClass} font-sans antialiased dark`}>
+      <body className={`${YekanBakh.variable} font-sans antialiased dark`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
