@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n/request";
+import { Analytics } from "@vercel/analytics/next";
 
 const YekanBakh = localFont({
   src: "../../fonts/YekanBakh-VF.woff",
@@ -58,6 +59,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
       <body className={`${YekanBakh.variable} font-sans antialiased dark`}>
+        <Analytics />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
