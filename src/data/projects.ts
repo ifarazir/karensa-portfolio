@@ -22,6 +22,20 @@ export const projectsData: YearProject[] = [
       {
         index: 10,
         title: {
+          fa: "برگر هایم",
+          en: "BurgerHeim",
+        },
+        description: {
+          fa: "« شرکت عمران و معماری برابر » شرکت برابر حاصل بیش از ۱۵ سال تفکر در خلق آثار متمایز و منحصر به فرد است و تلاش کرده در زمینه نوآوری در طراحی و ساخت همواره سرآمد باشد.",
+          en: "Burgerheim, a burger shop with its own specialized recipes and indebted to authentic American recipes, strives to bring the dining experience closer to that of an American diner.",
+        },
+        technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
+        image: "/images/projects/burgerheim-mockup.jpg",
+        link: "https://www.burgerheim.ir/",
+      },
+      {
+        index: 20,
+        title: {
           fa: "استودیو برابر",
           en: "Barabar Studio",
         },
@@ -32,49 +46,6 @@ export const projectsData: YearProject[] = [
         technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
         image: "/images/projects/barabar-mockup.jpg",
         link: "https://barabargroups.com/",
-      },
-      {
-        index: 20,
-        title: {
-          fa: "پتروکلین",
-          en: "Petroclean",
-        },
-        title_badge: "v2",
-        description: {
-          fa: "این شرکت فعالیت خود را از همان سال شروع و با نام تجاری «پتروکلین» تولیدات متنوعی را در بازار عرضه کرد. شایان ذکر است پتروکلین اولین تولید کننده پلاستیک‌های تجزیه پذیر در کشور است.",
-          en: "This company started its activity from the same year and offered various products to the market under the brand name 'Petroclean'. It is noteworthy that Petroclean is the first producer of biodegradable plastics in the country.",
-        },
-        technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
-        image: "/images/projects/petroclean-mockup-v2.jpg",
-        link: "#",
-      },
-      {
-        index: 30,
-        title: {
-          fa: "شرکت کاهنربا",
-          en: "Kahanroba Company",
-        },
-        description: {
-          fa: "شرکت کاهنربا بعنوان شرکت پیشرو گامهای بلندی در راستای بومی سازی تکنولوژی های استخراج و فرآوری مواد معدنی برداشته است.",
-          en: "Kahanroba Company, as a pioneer company, has taken long steps towards localizing extraction and processing technologies for mineral materials.",
-        },
-        technologies: ["Wordpress", "Elementor"],
-        image: "/images/projects/kahanroba-mockup.jpg",
-        link: "https://kahanroba.com/",
-      },
-      {
-        index: 40,
-        title: {
-          fa: "گروه مبلمان زیکس",
-          en: "Zix Furniture Group",
-        },
-        description: {
-          fa: "شرکت زیکس با سابقه چندین ساله فعال در زمینه تولید انواع مبلمان و اکسسوری های خاص با هدف معرفی محصولات خود در سطح وب و ارائه خدمات به مشتریان خود، اقدام به طراحی و پیاده سازی وبسایت خود کرده است.",
-          en: "Zix Company with several years of experience active in the production of various furniture and special accessories, with the aim of introducing its products on the web and providing services to its customers, has designed and implemented its website.",
-        },
-        technologies: ["Wordpress", "Elementor"],
-        image: "/images/projects/zix-website-mockup.jpg",
-        link: "https://alikheiri.com/",
       },
     ],
   },
@@ -109,6 +80,49 @@ export const projectsData: YearProject[] = [
         technologies: ["Odoo", "Python", "JavaScript", "Owl", "VanillaJS"],
         image: "/images/projects/divina-mockup.jpg",
         link: "#",
+      },
+      {
+        index: 30,
+        title: {
+          fa: "پتروکلین",
+          en: "Petroclean",
+        },
+        title_badge: "v2",
+        description: {
+          fa: "این شرکت فعالیت خود را از همان سال شروع و با نام تجاری «پتروکلین» تولیدات متنوعی را در بازار عرضه کرد. شایان ذکر است پتروکلین اولین تولید کننده پلاستیک‌های تجزیه پذیر در کشور است.",
+          en: "This company started its activity from the same year and offered various products to the market under the brand name 'Petroclean'. It is noteworthy that Petroclean is the first producer of biodegradable plastics in the country.",
+        },
+        technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
+        image: "/images/projects/petroclean-mockup-v2.jpg",
+        link: "#",
+      },
+      {
+        index: 40,
+        title: {
+          fa: "شرکت کاهنربا",
+          en: "Kahanroba Company",
+        },
+        description: {
+          fa: "شرکت کاهنربا بعنوان شرکت پیشرو گامهای بلندی در راستای بومی سازی تکنولوژی های استخراج و فرآوری مواد معدنی برداشته است.",
+          en: "Kahanroba Company, as a pioneer company, has taken long steps towards localizing extraction and processing technologies for mineral materials.",
+        },
+        technologies: ["Wordpress", "Elementor"],
+        image: "/images/projects/kahanroba-mockup.jpg",
+        link: "https://kahanroba.com/",
+      },
+      {
+        index: 50,
+        title: {
+          fa: "گروه مبلمان زیکس",
+          en: "Zix Furniture Group",
+        },
+        description: {
+          fa: "شرکت زیکس با سابقه چندین ساله فعال در زمینه تولید انواع مبلمان و اکسسوری های خاص با هدف معرفی محصولات خود در سطح وب و ارائه خدمات به مشتریان خود، اقدام به طراحی و پیاده سازی وبسایت خود کرده است.",
+          en: "Zix Company with several years of experience active in the production of various furniture and special accessories, with the aim of introducing its products on the web and providing services to its customers, has designed and implemented its website.",
+        },
+        technologies: ["Wordpress", "Elementor"],
+        image: "/images/projects/zix-website-mockup.jpg",
+        link: "https://alikheiri.com/",
       },
     ],
   },
@@ -236,7 +250,7 @@ export const projectsData: YearProject[] = [
         },
         description: {
           fa: "نرم افزار مدیریت مشتریان طلا با اتصال مستقیم به اسنپ فود و همگام سازی با دستگاه‌های مجموعه شیرینی‌فروشی‌های زنجیره‌ای الهیه ۳۳، ارتباط با مجموعه با مشتری و فروش روزانه مجموعه فوق را بهبود بخشیده است.",
-          en: "Premium customer management software with direct connection to Snap Food and synchronization with the devices of the Elahiyeh 33 confectionery chain, which has improved the relationship between the collection and customers and the daily sales of the above collection.",
+          en: "Premium customer management software with direct connection to SnappFood and synchronization with the devices of the Elahiyeh 33 confectionery chain, which has improved the relationship between the collection and customers and the daily sales of the above collection.",
         },
         technologies: [
           "NextJS",
@@ -333,7 +347,7 @@ export const projectsData: YearProject[] = [
         title_badge: "v2",
         description: {
           fa: "وی وی شبکه گسترده فعالان حوزه ورزش و سلامت است و به شما این امکان رو میده که برای رسیدن به اهداف ورزشیتون نزدیکترین و بهترین انتخاب رو داشته باشید.",
-          en: "VV is an extensive network of sports and health activists that gives you the opportunity to have the closest and best choice to achieve your sports goals.",
+          en: "VIWIN is an extensive network of sports and health activists that gives you the opportunity to have the closest and best choice to achieve your sports goals.",
         },
         technologies: [
           "NextJS",
@@ -626,8 +640,8 @@ export const projectsData: YearProject[] = [
         },
         title_badge: "v1",
         description: {
-          fa: "تولید کننده آینه‌های هوشمند مناسب فضاهای آرایشگاهی و سالن‌های زیبایی، فعال در کشور کانادا، هلند و دانمارک",
-          en: "Manufacturer of smart mirrors suitable for hairdressing spaces and beauty salons, active in Canada, Netherlands and Denmark.",
+          fa: "برونتاب انرژی، تولیدکننده تجهیزات هوشمند اندازه‌گیری، تفکیک هوشمند کنتورهای آب، برق، گاز (انرژی) و تجهیزات مانیتورینگ صنعتی مبتنی بر اینترنت اشیاء.",
+          en: "Bruntab Energy is a manufacturer of smart metering equipment, intelligent separation of water, electricity, and gas (energy) meters, and industrial monitoring devices based on the Internet of Things (IoT).",
         },
         technologies: ["Wordpress", "Divi"],
         image: "/images/projects/bruntab-mockup.jpg",
