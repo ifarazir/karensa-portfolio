@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n/request";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const YekanBakh = localFont({
   src: "../../fonts/YekanBakh-VF.woff",
@@ -53,7 +54,7 @@ export default async function LocaleLayout({
   }
 
   // Providing all messages to the client side is the easiest way to get started
-  const messages = await getMessages({locale});
+  const messages = await getMessages({ locale });
 
   const isRTL = locale === "fa";
 
@@ -66,6 +67,15 @@ export default async function LocaleLayout({
         </NextIntlClientProvider>
       </body>
       <GoogleAnalytics gaId="G-F9K2JNY2MN" />
+      {isRTL && (
+        <Script
+          id="goftino-widget"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var i="DHQHJr",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();`,
+          }}
+        />
+      )}
     </html>
   );
 }
