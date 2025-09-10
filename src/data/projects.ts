@@ -26,7 +26,7 @@ export const projectsData: YearProject[] = [
           en: "BurgerHeim",
         },
         description: {
-          fa: "« شرکت عمران و معماری برابر » شرکت برابر حاصل بیش از ۱۵ سال تفکر در خلق آثار متمایز و منحصر به فرد است و تلاش کرده در زمینه نوآوری در طراحی و ساخت همواره سرآمد باشد.",
+          fa: "برگر هایم، برگرشاپی وامدار به رسپی‌های اصلی آمریکایی، با برندینگی متفاوت، تمیز و قابل اعتماد است که در حال حاضر با تمرکز بر منو‌ایی با محوریت برگر و ساید‌های آمریکایی به فعالیت می‌پردازد. برگرها تماما رسپی‌های اورجینال خودمان بوده که با ویژگی‌های مختلفی در حال ارائه هستند.",
           en: "Burgerheim, a burger shop with its own specialized recipes and indebted to authentic American recipes, strives to bring the dining experience closer to that of an American diner.",
         },
         technologies: ["NextJS", "DirectUs", "Tailwind", "FramerMotion"],
