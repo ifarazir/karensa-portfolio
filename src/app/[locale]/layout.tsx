@@ -59,8 +59,15 @@ export default async function LocaleLayout({
   const isRTL = locale === "fa";
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
-      <body className={`${YekanBakh.variable} font-sans antialiased dark`}>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className={`${YekanBakh.variable} font-sans antialiased`}>
         <Analytics />
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -1,12 +1,98 @@
 {
   "metadata": {
     "title": "Karensa Studio",
-    "description": "Portfolio"
+    "description": "Software development studio crafting websites, web apps and ERP systems."
   },
   "nav": {
     "website": "Studio Website",
-    "process": "Collaboration Process",
-    "contact": "Contact Us"
+    "process": "Process",
+    "contact": "Contact",
+    "services": "Services",
+    "work": "Work",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "titleLead": "We design & build",
+    "titleAccent": "software that performs.",
+    "subtitle": "Karensa is a software development studio. We craft fast websites, scalable web apps, and tailored ERP systems for ambitious brands — from idea to launch.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "View our work",
+    "proof": "{count}+ projects delivered since 2015",
+    "stackLabel": "Built with a modern, battle-tested stack"
+  },
+  "stats": {
+    "projects": "Projects delivered",
+    "years": "Years of experience",
+    "tech": "Technologies mastered",
+    "commitment": "Commitment to quality"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Everything you need to ship",
+    "subtitle": "One studio for design, engineering and the systems that run your business.",
+    "items": {
+      "web": {
+        "title": "Web Design & Development",
+        "desc": "Marketing sites and landing pages that load fast, rank well, and convert — built with Next.js and Tailwind."
+      },
+      "apps": {
+        "title": "Web Applications",
+        "desc": "Dashboards, platforms and SaaS products engineered for performance, reliability and scale."
+      },
+      "erp": {
+        "title": "ERP & Business Systems",
+        "desc": "Custom Odoo and internal tooling that streamline operations, sales and inventory across your company."
+      },
+      "cms": {
+        "title": "CMS & Content Platforms",
+        "desc": "Flexible, editor-friendly websites powered by Directus, WordPress and headless architectures."
+      },
+      "mobile": {
+        "title": "Mobile Applications",
+        "desc": "Native and cross-platform iOS & Android apps built with React Native — fast, polished, and production-ready."
+      },
+      "social": {
+        "title": "Photography & Social Media",
+        "desc": "Professional product and brand photography combined with content strategy to make your social presence stand out."
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Projects we're proud of",
+    "subtitle": "A selection of recent products and platforms shipped for our clients.",
+    "showAll": "View all {count} projects",
+    "showLess": "Show featured only"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's build something great",
+    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
+    "location": "Based in Tehran — working worldwide",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project, goals and timeline…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "successTitle": "Message sent",
+      "success": "Thanks for reaching out — we'll get back to you shortly.",
+      "error": "Something went wrong. Please try again or email us directly.",
+      "again": "Send another message"
+    }
+  },
+  "footer": {
+    "tagline": "A software development studio building websites, web apps and ERP systems for ambitious brands.",
+    "explore": "Explore",
+    "studio": "Studio",
+    "rights": "All rights reserved.",
+    "madeWith": "Designed & built by Karensa"
   },
   "projects": {
     "title": "Projects",

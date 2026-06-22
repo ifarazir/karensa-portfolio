@@ -49,6 +49,10 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
+				brand: {
+					DEFAULT: 'hsl(var(--brand))',
+					foreground: 'hsl(var(--brand-foreground))'
+				},
 				chart: {
 					'1': 'hsl(var(--chart-1))',
 					'2': 'hsl(var(--chart-2))',
@@ -61,6 +65,28 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			maxWidth: {
+				'screen-xl': '1200px'
+			},
+			keyframes: {
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(16px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				}
+			},
+			animation: {
+				'fade-up': 'fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both',
+				'fade-in': 'fade-in 0.8s ease both',
+				'marquee': 'marquee 28s linear infinite'
 			}
 		}
 	},
