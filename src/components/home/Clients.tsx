@@ -1,13 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
 import WindowBar from "./WindowBar";
 import { getAllProjects } from "@/lib/featured-projects";
-
-import "swiper/css";
-import "swiper/css/free-mode";
 
 /** Project slug → logo asset path */
 const LOGOS: Record<string, string> = {
@@ -43,69 +38,67 @@ const EXTRA_BRANDS: Brand[] = [
   { name: "Simorgh Tejarat", logo: "/images/clients/simorgh-tejarat.png" },
 ];
 
-type Brand = { name: string; logo?: string };
+type Brand = { name: string; logo: string };
 
 function Cell({ brand }: { brand: Brand }) {
   return (
-    <div className="group flex h-20 items-center justify-center rounded-lg border border-black/10 bg-white px-8">
-      {brand.logo ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={brand.logo}
-          alt={brand.name}
-          loading="lazy"
-          className="max-h-10 w-auto object-contain opacity-60 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
-        />
-      ) : (
-        <span className="whitespace-nowrap text-base font-semibold tracking-tight text-neutral-500 transition-colors duration-300 group-hover:text-neutral-900">
-          {brand.name}
-        </span>
-      )}
+    <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={brand.logo}
+        alt={brand.name}
+        loading="lazy"
+        className="max-h-10 w-auto h-full object-contain opacity-60 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+      />
     </div>
   );
 }
 
+/**
+ * Infinite, never-pausing logo marquee built with a CSS keyframe animation
+ * (NOT the deprecated <marquee> element). The track holds two copies of the
+ * items and slides by -50%, so the loop is seamless. Direction is flipped per
+ * row via `animation-direction`.
+ */
 function MarqueeRow({
   items,
-  speed,
+  duration,
   reverse = false,
 }: {
   items: Brand[];
-  speed: number;
+  duration: number;
   reverse?: boolean;
 }) {
   return (
-    <Swiper
-      modules={[Autoplay, FreeMode]}
-      slidesPerView="auto"
-      spaceBetween={12}
-      loop
-      freeMode
-      allowTouchMove={false}
-      speed={speed}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-        reverseDirection: reverse,
-      }}
-      className="marquee-swiper mask-fade-x w-full min-w-0 !overflow-hidden"
-    >
-      {items.map((brand, i) => (
-        <SwiperSlide key={`${brand.name}-${i}`} className="!w-auto">
-          <Cell brand={brand} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative overflow-hidden mask-fade-x" dir="ltr">
+      <div
+        className="flex w-max gap-3"
+        style={{
+          animationName: "clients-marquee",
+          animationDuration: `${duration}s`,
+          animationTimingFunction: "linear",
+          animationIterationCount: "infinite",
+          animationDirection: reverse ? "reverse" : "normal",
+          willChange: "transform",
+        }}
+      >
+        {[...items, ...items].map((brand, i) => (
+          <Cell key={`${brand.name}-${i}`} brand={brand} />
+        ))}
+      </div>
+    </div>
   );
 }
 
 export default function Clients() {
   const t = useTranslations();
 
-  const projectBrands: Brand[] = getAllProjects().map((p) => ({
-    name: p.title.en,
-    logo: LOGOS[p.slug],
-  }));
+  // Only brands that actually have a logo image (drop text-only fallbacks)
+  const projectBrands: Brand[] = getAllProjects()
+    .filter((p) => LOGOS[p.slug])
+    // duplicate the brand name for each logo
+    .map((p) => ({ name: p.title.en, logo: LOGOS[p.slug] }))
+    .flatMap((p) => [p, p]);
 
   // Merge project brands + extra logo-only brands, deduplicate by name
   const seen = new Set(projectBrands.map((b) => b.name));
@@ -126,9 +119,9 @@ export default function Clients() {
         </p>
         <div className="flex flex-col gap-3">
           {/* row 1 → left to right */}
-          <MarqueeRow items={row1} speed={6000} reverse />
+          <MarqueeRow items={row1} duration={45} reverse />
           {/* row 2 → right to left */}
-          <MarqueeRow items={row2} speed={7000} />
+          <MarqueeRow items={row2} duration={55} />
         </div>
       </div>
     </section>

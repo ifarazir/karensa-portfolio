@@ -219,8 +219,14 @@
   font-variation-settings: "DOTS" var(--variable-dot);
   font-feature-settings: "ss01" var(--variable-fa-num), "ss02" var(--variable-kaf-swash), "ss03" var(--variable-reversed-yeh), "ss06" var(--variable-stylistic-currency), "ss07" var(--variable-align-numbers);
 }
-/* Clients marquee (Swiper). Force a linear timing function on the wrapper so
-   autoplay with delay:0 scrolls continuously instead of easing per-slide. */
-.marquee-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
+/* Clients logo marquee. CSS keyframe animation (not the deprecated <marquee>
+   element). Track holds two copies of the items, so sliding by -50% loops
+   seamlessly. It never pauses on hover/click because there is no JS involved. */
+@keyframes clients-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

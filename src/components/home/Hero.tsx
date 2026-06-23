@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Reveal from "./Reveal";
+import { Waves } from "@/components/ui/wave-background";
 
 export default function Hero() {
   const t = useTranslations();
@@ -10,8 +11,10 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* background */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid mask-fade-y opacity-[0.55]" />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 mask-fade-y opacity-[0.06]">
+          <Waves strokeColor="hsl(var(--foreground))" pointerSize={0} />
+        </div>
       </div>
 
       <div className="container-x flex flex-col items-center pt-20 pb-16 text-center sm:pt-28 sm:pb-24">
