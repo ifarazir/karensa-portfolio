@@ -40,6 +40,16 @@ const EXTRA_BRANDS: Brand[] = [
 
 type Brand = { name: string; logo: string };
 
+/** One logo per brand — multiple projects can share the same client logo. */
+function dedupeBrands(brands: Brand[]): Brand[] {
+  const seen = new Set<string>();
+  return brands.filter((brand) => {
+    if (seen.has(brand.logo)) return false;
+    seen.add(brand.logo);
+    return true;
+  });
+}
+
 function Cell({ brand }: { brand: Brand }) {
   return (
     <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8">
@@ -83,7 +93,7 @@ function MarqueeRow({
         }}
       >
         {[...items, ...items].map((brand, i) => (
-          <Cell key={`${brand.name}-${i}`} brand={brand} />
+          <Cell key={`${brand.logo}-${i}`} brand={brand} />
         ))}
       </div>
     </div>
@@ -93,19 +103,13 @@ function MarqueeRow({
 export default function Clients() {
   const t = useTranslations();
 
-  // Only brands that actually have a logo image (drop text-only fallbacks)
-  const projectBrands: Brand[] = getAllProjects()
-    .filter((p) => LOGOS[p.slug])
-    // duplicate the brand name for each logo
-    .map((p) => ({ name: p.title.en, logo: LOGOS[p.slug] }))
-    .flatMap((p) => [p, p]);
+  const projectBrands = dedupeBrands(
+    getAllProjects()
+      .filter((p) => LOGOS[p.slug])
+      .map((p) => ({ name: p.title.en, logo: LOGOS[p.slug]! }))
+  );
 
-  // Merge project brands + extra logo-only brands, deduplicate by name
-  const seen = new Set(projectBrands.map((b) => b.name));
-  const all: Brand[] = [
-    ...projectBrands,
-    ...EXTRA_BRANDS.filter((b) => !seen.has(b.name)),
-  ];
+  const all = dedupeBrands([...projectBrands, ...EXTRA_BRANDS]);
 
   const row1 = all.filter((_, i) => i % 2 === 0);
   const row2 = all.filter((_, i) => i % 2 === 1);
