@@ -1,5 +1,6 @@
 import Header from "@/components/home/Header";
 import Hero from "@/components/home/Hero";
+import Clients from "@/components/home/Clients";
 import Stats from "@/components/home/Stats";
 import Services from "@/components/home/Services";
 import Work from "@/components/home/Work";
@@ -11,11 +12,14 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <Hero />
-        <Stats />
-        <Services />
-        <Work />
-        <Contact />
+        <div className="framed divide-y divide-border">
+          <Hero />
+          <Clients />
+          <Stats />
+          <Services />
+          <Work />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>

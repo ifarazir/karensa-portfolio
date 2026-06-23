@@ -3,23 +3,9 @@
 import { useTranslations } from "next-intl";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Reveal from "./Reveal";
-import { getProjectCount } from "@/lib/featured-projects";
-
-const STACK = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Directus",
-  "Odoo",
-  "Python",
-  "WordPress",
-  "Framer Motion",
-];
 
 export default function Hero() {
   const t = useTranslations();
-  const count = getProjectCount();
 
   return (
     <section className="relative overflow-hidden">
@@ -31,18 +17,18 @@ export default function Hero() {
       <div className="container-x flex flex-col items-center pt-20 pb-16 text-center sm:pt-28 sm:pb-24">
         <Reveal>
           <span className="eyebrow">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground/60" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-foreground" />
             </span>
             {t("hero.badge")}
           </span>
         </Reveal>
 
         <Reveal delay={80}>
-          <h1 className="mt-6 max-w-4xl text-balance text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mt-7 max-w-4xl text-balance text-5xl font-extrabold leading-[0.98] tracking-tighter sm:text-7xl lg:text-[5.25rem]">
             {t("hero.titleLead")}{" "}
-            <span className="italic">{t("hero.titleAccent")}</span>
+            <span className="italic font-light">{t("hero.titleAccent")}</span>
           </h1>
         </Reveal>
 
@@ -67,38 +53,9 @@ export default function Hero() {
 
         <Reveal delay={320}>
           <p className="mt-6 text-sm text-muted-foreground faNum">
-            {t("hero.proof", { count })}
+            {t("hero.proof", { count: "70" })}
           </p>
         </Reveal>
-      </div>
-
-      {/* tech marquee */}
-      <div className="pb-16 sm:pb-24">
-        <Reveal className="container-x mb-6">
-          <p className="text-center text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-            {t("hero.stackLabel")}
-          </p>
-        </Reveal>
-        {/*
-          Single-track seamless loop: 2 identical copies side-by-side.
-          Animating from translateX(0) → translateX(-50%) shifts exactly
-          one copy-width to the left, then loops invisibly to 0 again.
-        */}
-        <div className="relative overflow-hidden mask-fade-x">
-          <div
-            className="flex w-max gap-3 py-1"
-            style={{ animation: "marquee 30s linear infinite", willChange: "transform" }}
-          >
-            {[...STACK, ...STACK].map((tech, i) => (
-              <span
-                key={i}
-                className="whitespace-nowrap rounded-full border border-border bg-secondary/50 px-4 py-2 text-sm font-medium text-muted-foreground"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

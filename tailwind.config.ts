@@ -12,6 +12,15 @@ export default {
 			sans: [
 				'var(--font-yekan-bakh)',
 				'sans-serif'
+			],
+			mono: [
+				'ui-monospace',
+				'SFMono-Regular',
+				'"SF Mono"',
+				'Menlo',
+				'Consolas',
+				'"Liberation Mono"',
+				'monospace'
 			]
 		},
 		extend: {

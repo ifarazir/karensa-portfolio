@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Mail, Globe, MapPin, ArrowRight, Check, Loader2 } from "lucide-react";
 import Reveal from "./Reveal";
+import WindowBar from "./WindowBar";
 
 const CONTACT_EMAIL = "info@karensastudio.com";
 const STUDIO_URL = "https://karensastudio.com/";
@@ -39,15 +40,16 @@ export default function Contact() {
     "w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-brand focus:ring-2 focus:ring-brand/20";
 
   return (
-    <section id="contact" className="container-x scroll-mt-20 py-20 sm:py-28">
+    <section id="contact" className="scroll-mt-16">
+      <WindowBar label={t("windows.contact")} />
+      <div className="container-x py-20 sm:py-28">
       <div className="overflow-hidden rounded-3xl border border-border bg-secondary/30">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Info panel */}
           <Reveal className="relative flex flex-col justify-between gap-10 p-8 sm:p-12">
             <div className="pointer-events-none absolute inset-0 -z-10 bg-dots opacity-40" />
             <div>
-              <span className="eyebrow">{t("contact.eyebrow")}</span>
-              <h2 className="mt-5 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="text-balance text-4xl font-extrabold tracking-tighter sm:text-5xl">
                 {t("contact.title")}
               </h2>
               <p className="mt-4 max-w-md text-balance text-muted-foreground">
@@ -92,7 +94,7 @@ export default function Contact() {
           <Reveal delay={120} className="border-t border-border bg-card p-8 sm:p-12 lg:border-s lg:border-t-0">
             {status === "success" ? (
               <div className="flex h-full min-h-[320px] flex-col items-center justify-center text-center">
-                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-foreground text-background">
                   <Check className="h-7 w-7" />
                 </span>
                 <h3 className="mt-5 text-xl font-semibold">
@@ -139,6 +141,19 @@ export default function Contact() {
                       className={fieldClass}
                     />
                   </div>
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  <label htmlFor="phone" className="text-sm font-medium">
+                    {t("contact.form.phone")}
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder={t("contact.form.phonePlaceholder")}
+                    className={fieldClass}
+                  />
                 </div>
 
                 <div className="flex flex-col gap-1.5">
@@ -194,6 +209,7 @@ export default function Contact() {
             )}
           </Reveal>
         </div>
+      </div>
       </div>
     </section>
   );

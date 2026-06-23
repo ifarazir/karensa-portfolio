@@ -7,10 +7,12 @@ import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight, Plus, Minus } from "lucide-react";
 import Reveal from "./Reveal";
+import WindowBar from "./WindowBar";
 import { projectsData, type Project } from "@/data/projects";
 import {
   getFeaturedProjects,
   getProjectCount,
+  slugify,
   type FlatProject,
 } from "@/lib/featured-projects";
 
@@ -24,34 +26,25 @@ function ProjectCard({
   locale: "fa" | "en";
 }) {
   const t = useTranslations();
-  const isLink = project.link !== "#";
-  const Wrapper = ({ children }: { children: React.ReactNode }) =>
-    isLink ? (
-      <Link href={project.link} target="_blank" rel="noopener noreferrer">
-        {children}
-      </Link>
-    ) : (
-      <>{children}</>
-    );
+  const slug = slugify(project.title.en);
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_18px_50px_-18px_hsl(var(--brand)/0.4)]">
-      <Wrapper>
-        <div className="relative aspect-[16/10] overflow-hidden bg-secondary/40">
-          <Image
-            src={project.image}
-            alt={project.title[locale]}
-            width={1280}
-            height={832}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          />
-          {isLink && (
-            <span className="absolute end-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/80 text-foreground opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
-              <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />
-            </span>
-          )}
-        </div>
-      </Wrapper>
+    <Link
+      href={`/${locale}/work/${slug}`}
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-[0_20px_50px_-24px_hsl(var(--foreground)/0.4)]"
+    >
+      <div className="relative aspect-[16/10] overflow-hidden bg-secondary/40">
+        <Image
+          src={project.image}
+          alt={project.title[locale]}
+          width={1280}
+          height={832}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+        <span className="absolute end-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/80 text-foreground opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
+          <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />
+        </span>
+      </div>
 
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-3">
@@ -83,7 +76,7 @@ function ProjectCard({
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -97,14 +90,15 @@ export default function Work() {
   const total = getProjectCount();
 
   return (
-    <section id="work" className="container-x scroll-mt-20 py-20 sm:py-28">
+    <section id="work" className="scroll-mt-16">
+      <WindowBar label={t("windows.work")} />
+      <div className="container-x py-20 sm:py-28">
       <Reveal className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <div className="max-w-2xl">
-          <span className="eyebrow">{t("work.eyebrow")}</span>
-          <h2 className="mt-5 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-balance text-4xl font-extrabold tracking-tighter sm:text-5xl">
             {t("work.title")}
           </h2>
-          <p className="mt-4 text-balance text-muted-foreground">
+          <p className="mt-5 text-balance text-muted-foreground">
             {t("work.subtitle")}
           </p>
         </div>
@@ -168,6 +162,7 @@ export default function Work() {
             </>
           )}
         </button>
+      </div>
       </div>
     </section>
   );

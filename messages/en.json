@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Karensa Studio",
-    "description": "Software development studio crafting websites, web apps and ERP systems."
+    "description": "Software studio building websites, web apps and ERP systems."
   },
   "nav": {
     "website": "Studio Website",
@@ -11,88 +11,109 @@
     "work": "Work",
     "cta": "Start a project"
   },
+  "windows": {
+    "stats": "By the numbers",
+    "clients": "Clients",
+    "services": "Services",
+    "work": "Selected work",
+    "contact": "Contact",
+    "caseStudy": "Case study"
+  },
   "hero": {
     "badge": "Available for new projects",
-    "titleLead": "We design & build",
-    "titleAccent": "software that performs.",
-    "subtitle": "Karensa is a software development studio. We craft fast websites, scalable web apps, and tailored ERP systems for ambitious brands — from idea to launch.",
+    "titleLead": "We design and build",
+    "titleAccent": "platforms that work.",
+    "subtitle": "Karensa is a software studio. We build websites, web apps, and ERP systems — from the first idea to production.",
     "ctaPrimary": "Start a project",
     "ctaSecondary": "View our work",
-    "proof": "{count}+ projects delivered since 2015",
-    "stackLabel": "Built with a modern, battle-tested stack"
+    "proof": "{count}+ projects since 2015",
+    "clientsLabel": "Brands we've built for"
   },
   "stats": {
-    "projects": "Projects delivered",
-    "years": "Years of experience",
-    "tech": "Technologies mastered",
-    "commitment": "Commitment to quality"
+    "projects": "Projects shipped",
+    "years": "Years building",
+    "tech": "Technologies",
+    "commitment": "Hours of commitment"
   },
   "services": {
     "eyebrow": "What we do",
-    "title": "Everything you need to ship",
-    "subtitle": "One studio for design, engineering and the systems that run your business.",
+    "title": "What we build",
+    "subtitle": "From websites to internal systems — one team across design and engineering.",
     "items": {
       "web": {
         "title": "Web Design & Development",
-        "desc": "Marketing sites and landing pages that load fast, rank well, and convert — built with Next.js and Tailwind."
+        "desc": "Marketing sites, e-commerce and landing pages built with Next.js and Tailwind — fast to load and easy to maintain."
       },
       "apps": {
         "title": "Web Applications",
-        "desc": "Dashboards, platforms and SaaS products engineered for performance, reliability and scale."
+        "desc": "Dashboards, platforms and SaaS products built for performance and scale."
       },
       "erp": {
         "title": "ERP & Business Systems",
-        "desc": "Custom Odoo and internal tooling that streamline operations, sales and inventory across your company."
+        "desc": "Custom ERP platforms and internal tools for operations, sales, finance and inventory."
       },
       "cms": {
         "title": "CMS & Content Platforms",
-        "desc": "Flexible, editor-friendly websites powered by Directus, WordPress and headless architectures."
+        "desc": "Editor-friendly sites on PayloadCMS, Directus, WordPress and headless setups."
       },
       "mobile": {
         "title": "Mobile Applications",
-        "desc": "Native and cross-platform iOS & Android apps built with React Native — fast, polished, and production-ready."
+        "desc": "iOS and Android apps with React Native, ready for production."
       },
       "social": {
         "title": "Photography & Social Media",
-        "desc": "Professional product and brand photography combined with content strategy to make your social presence stand out."
+        "desc": "Photography, video production and content management for social channels."
       }
     }
   },
   "work": {
     "eyebrow": "Selected work",
-    "title": "Projects we're proud of",
-    "subtitle": "A selection of recent products and platforms shipped for our clients.",
+    "title": "Recent work",
+    "subtitle": "A few products and platforms we've built recently.",
     "showAll": "View all {count} projects",
-    "showLess": "Show featured only"
+    "showLess": "Show featured only",
+    "viewCase": "View case study"
   },
   "contact": {
     "eyebrow": "Get in touch",
-    "title": "Let's build something great",
-    "subtitle": "Tell us about your project and we'll get back to you within one business day.",
-    "location": "Based in Tehran — working worldwide",
+    "title": "Tell us about your project",
+    "subtitle": "Send a few details and we'll reply within one business day.",
+    "location": "Tehran — working remotely worldwide",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your full name",
       "email": "Email",
       "emailPlaceholder": "you@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1234567890",
       "subject": "Subject",
       "subjectPlaceholder": "What's this about?",
       "message": "Message",
-      "messagePlaceholder": "Tell us about your project, goals and timeline…",
+      "messagePlaceholder": "Project, goals and rough timeline…",
       "submit": "Send message",
       "sending": "Sending…",
       "successTitle": "Message sent",
-      "success": "Thanks for reaching out — we'll get back to you shortly.",
+      "success": "Thanks — we'll get back to you shortly.",
       "error": "Something went wrong. Please try again or email us directly.",
       "again": "Send another message"
     }
   },
+  "caseStudy": {
+    "back": "Back to work",
+    "overview": "Overview",
+    "details": "Project details",
+    "year": "Year",
+    "stack": "Stack",
+    "type": "Type",
+    "visit": "Visit live site",
+    "more": "More projects"
+  },
   "footer": {
-    "tagline": "A software development studio building websites, web apps and ERP systems for ambitious brands.",
+    "tagline": "A software studio building websites, web apps and ERP systems.",
     "explore": "Explore",
     "studio": "Studio",
     "rights": "All rights reserved.",
-    "madeWith": "Designed & built by Karensa"
+    "madeWith": "Built by Karensa"
   },
   "projects": {
     "title": "Projects",

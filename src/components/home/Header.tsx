@@ -24,17 +24,15 @@ export default function Header() {
   }, []);
 
   const links = [
-    { href: "#services", label: t("nav.services") },
-    { href: "#work", label: t("nav.work") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: `/${locale}#services`, label: t("nav.services") },
+    { href: `/${locale}#work`, label: t("nav.work") },
+    { href: `/${locale}#contact`, label: t("nav.contact") },
   ];
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-background/0"
+      className={`sticky top-0 z-50 border-b border-border transition-colors duration-300 ${
+        scrolled ? "bg-background/80 backdrop-blur-xl" : "bg-background"
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between gap-4">
@@ -68,7 +66,7 @@ export default function Header() {
         <div className="hidden items-center gap-2 md:flex">
           <LanguageSwitcher />
           <ThemeToggle />
-          <a href="#contact" className="btn-primary ms-1">
+          <a href={`/${locale}#contact`} className="btn-primary ms-1">
             {t("nav.cta")}
           </a>
         </div>
@@ -102,7 +100,7 @@ export default function Header() {
             <div className="mt-2 flex items-center justify-between border-t border-border pt-4">
               <LanguageSwitcher />
               <a
-                href="#contact"
+                href={`/${locale}#contact`}
                 onClick={() => setOpen(false)}
                 className="btn-primary"
               >

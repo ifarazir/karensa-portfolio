@@ -10,6 +10,7 @@ import {
   Camera,
 } from "lucide-react";
 import Reveal from "./Reveal";
+import WindowBar from "./WindowBar";
 
 const SERVICES = [
   { key: "web", icon: Code2 },
@@ -24,33 +25,42 @@ export default function Services() {
   const t = useTranslations();
 
   return (
-    <section id="services" className="container-x scroll-mt-20 py-20 sm:py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
-        <span className="eyebrow">{t("services.eyebrow")}</span>
-        <h2 className="mt-5 text-balance text-3xl font-bold tracking-tight sm:text-4xl">
-          {t("services.title")}
-        </h2>
-        <p className="mt-4 text-balance text-muted-foreground">
-          {t("services.subtitle")}
-        </p>
-      </Reveal>
+    <section id="services" className="scroll-mt-16">
+      <WindowBar label={t("windows.services")} />
+      <div className="container-x py-20 sm:py-28">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <h2 className="text-balance text-4xl font-extrabold tracking-tighter sm:text-5xl">
+            {t("services.title")}
+          </h2>
+          <p className="mt-5 text-balance text-muted-foreground">
+            {t("services.subtitle")}
+          </p>
+        </Reveal>
+      </div>
 
-      <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-px border-t border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service, i) => {
           const Icon = service.icon;
           return (
-            <Reveal key={service.key} delay={i * 70}>
-              <div className="group h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_12px_40px_-12px_hsl(var(--brand)/0.35)]">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-secondary/60 text-brand transition-colors group-hover:bg-brand group-hover:text-brand-foreground">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold tracking-tight">
-                  {t(`services.items.${service.key}.title`)}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`services.items.${service.key}.desc`)}
-                </p>
+            <Reveal
+              key={service.key}
+              delay={i * 60}
+              className="group bg-background p-8 transition-colors duration-300 hover:bg-secondary/50"
+            >
+              <div className="flex items-center gap-4">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-card transition-colors group-hover:bg-foreground group-hover:text-background">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="font-mono text-xs text-muted-foreground">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
+              <h3 className="mt-6 text-xl font-bold tracking-tight">
+                {t(`services.items.${service.key}.title`)}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {t(`services.items.${service.key}.desc`)}
+              </p>
             </Reveal>
           );
         })}

@@ -12,9 +12,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const pageLinks = [
-    { href: "#services", label: t("nav.services") },
-    { href: "#work", label: t("nav.work") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: `/${locale}#services`, label: t("nav.services") },
+    { href: `/${locale}#work`, label: t("nav.work") },
+    { href: `/${locale}#contact`, label: t("nav.contact") },
   ];
 
   const studioLinks = [
