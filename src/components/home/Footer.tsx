@@ -17,14 +17,10 @@ export default function Footer() {
     { href: `/${locale}#contact`, label: t("nav.contact") },
   ];
 
-  const studioLinks = [
-    { href: "https://karensastudio.com/", label: t("nav.website") },
-  ];
-
   return (
     <footer className="border-t border-border">
       <div className="container-x py-14">
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
           <div className="col-span-2">
             <Link href={`/${locale}`} className="flex items-center gap-2.5">
               <Logomark
@@ -51,23 +47,6 @@ export default function Footer() {
                   >
                     {link.label}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold">{t("footer.studio")}</h4>
-            <ul className="mt-4 flex flex-col gap-3">
-              {studioLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    target="_blank"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
                 </li>
               ))}
             </ul>

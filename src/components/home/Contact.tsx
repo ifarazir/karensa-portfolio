@@ -3,11 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Mail, Globe, MapPin, ArrowRight, Check, Loader2 } from "lucide-react";
+import { Mail, Phone, Globe, MapPin, ArrowRight, Check, Loader2 } from "lucide-react";
 import Reveal from "./Reveal";
 import WindowBar from "./WindowBar";
 
 const CONTACT_EMAIL = "info@karensastudio.com";
+const CONTACT_PHONE = "+989392676126";
 const STUDIO_URL = "https://karensastudio.com/";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -67,6 +68,19 @@ export default function Contact() {
                     <Mail className="h-5 w-5" />
                   </span>
                   {CONTACT_EMAIL}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${CONTACT_PHONE}`}
+                  className="group flex items-center gap-3 text-sm font-medium transition-colors hover:text-brand"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-brand">
+                    <Phone className="h-5 w-5" />
+                  </span>
+                  <span dir="ltr" className="faNum">
+                    {t("contact.phone")}
+                  </span>
                 </a>
               </li>
               <li>

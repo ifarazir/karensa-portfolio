@@ -31,19 +31,146 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+const SITE_URL = "https://karensastudio.com";
+
+const SEO = {
+  fa: {
+    title: "استودیو کارنسا | طراحی و توسعه وب‌سایت، اپلیکیشن و سیستم ERP",
+    template: "%s | استودیو کارنسا",
+    description:
+      "استودیوی نرم‌افزار کارنسا؛ طراحی و توسعه‌ی وب‌سایت، وب‌اپلیکیشن، اپلیکیشن موبایل و سیستم‌های ERP. بیش از ۱۰ سال تجربه و بیش از ۳۰ پروژه‌ی موفق، از ایده تا محصول نهایی.",
+    keywords: [
+      "استودیو کارنسا",
+      "طراحی سایت",
+      "طراحی وب‌سایت",
+      "توسعه وب",
+      "وب اپلیکیشن",
+      "اپلیکیشن موبایل",
+      "نرم‌افزار سفارشی",
+      "سیستم ERP",
+      "Next.js",
+      "ری‌اکت",
+      "طراحی فروشگاه اینترنتی",
+    ],
+    locale: "fa_IR",
+  },
+  en: {
+    title: "Karensa Studio | Websites, Web Apps & ERP Systems",
+    template: "%s | Karensa Studio",
+    description:
+      "Karensa is a software studio designing and building websites, web apps, mobile apps and ERP systems. 10+ years of experience and 30+ shipped projects — from the first idea to production.",
+    keywords: [
+      "Karensa Studio",
+      "software studio",
+      "web design",
+      "web development",
+      "web applications",
+      "mobile apps",
+      "ERP systems",
+      "Next.js agency",
+      "React development",
+      "custom software",
+    ],
+    locale: "en_US",
+  },
+} as const;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-
-  if (locale === "fa") {
-    return {
-      title: "استودیو کارنسا",
-      description: "پرتفولیو",
-    };
-  }
+  const isFa = locale === "fa";
+  const seo = isFa ? SEO.fa : SEO.en;
 
   return {
-    title: "Karensa Studio",
-    description: "Portfolio",
+    metadataBase: new URL(SITE_URL),
+    title: { default: seo.title, template: seo.template },
+    description: seo.description,
+    keywords: [...seo.keywords],
+    applicationName: "Karensa Studio",
+    authors: [{ name: "Karensa Studio", url: SITE_URL }],
+    creator: "Karensa Studio",
+    publisher: "Karensa Studio",
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: {
+        en: `${SITE_URL}/en`,
+        fa: `${SITE_URL}/fa`,
+        "x-default": `${SITE_URL}/fa`,
+      },
+    },
+    openGraph: {
+      type: "website",
+      siteName: "Karensa Studio",
+      url: `${SITE_URL}/${locale}`,
+      title: seo.title,
+      description: seo.description,
+      locale: seo.locale,
+      alternateLocale: isFa ? "en_US" : "fa_IR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    formatDetection: { telephone: true, email: true, address: false },
+  };
+}
+
+function structuredData(locale: string) {
+  const isFa = locale === "fa";
+  const orgName = isFa ? "استودیو کارنسا" : "Karensa Studio";
+  const description = isFa ? SEO.fa.description : SEO.en.description;
+
+  const organization = {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: orgName,
+    alternateName: "Karensa Studio",
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon`,
+    image: `${SITE_URL}/${locale}/opengraph-image`,
+    description,
+    email: "info@karensastudio.com",
+    foundingDate: "2015",
+    areaServed: "Worldwide",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Tehran",
+      addressCountry: "IR",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+989392676126",
+      email: "info@karensastudio.com",
+      contactType: "customer service",
+      availableLanguage: ["fa", "en"],
+    },
+    sameAs: [SITE_URL],
+  };
+
+  const website = {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: `${SITE_URL}/${locale}`,
+    name: orgName,
+    description,
+    inLanguage: isFa ? "fa-IR" : "en-US",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [organization, website],
   };
 }
 
@@ -76,6 +203,12 @@ export default async function LocaleLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})();`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData(locale)),
           }}
         />
       </head>

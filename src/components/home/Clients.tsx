@@ -13,6 +13,9 @@ const LOGOS: Record<string, string> = {
   "divina-holding-erp-software": "/images/clients/divina.png",
   "zivan-chain-pet-shop": "/images/clients/zivan.png",
   "daniellee-application": "/images/clients/daniellee.png",
+  "hayk-coffee-roasters": "/images/clients/hayk.png",
+  feli: "/images/clients/feli.png",
+  "barabar-studio": "/images/clients/barabar.png",
   // new folder
   finup: "/images/clients/finup.svg",
   "avid-foam": "/images/clients/avidfoam.png",
@@ -52,13 +55,13 @@ function dedupeBrands(brands: Brand[]): Brand[] {
 
 function Cell({ brand }: { brand: Brand }) {
   return (
-    <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8">
+    <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8 dark:border-white/10 dark:bg-white/[0.04]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={brand.logo}
         alt={brand.name}
         loading="lazy"
-        className="max-h-10 w-auto h-full object-contain opacity-60 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+        className="h-full max-h-10 w-auto object-contain opacity-50 brightness-0 transition duration-300 group-hover:opacity-100 dark:opacity-60 dark:brightness-0 dark:invert"
       />
     </div>
   );
