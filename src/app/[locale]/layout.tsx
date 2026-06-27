@@ -15,6 +15,18 @@ const YekanBakh = localFont({
   weight: "100 950",
 });
 
+const Tahrir = localFont({
+  src: [
+    { path: "../../fonts/tahrir/TahrirBook.woff2", weight: "300", style: "normal" },
+    { path: "../../fonts/tahrir/TahrirRegular.woff2", weight: "400", style: "normal" },
+    { path: "../../fonts/tahrir/TahrirMedium.woff2", weight: "500", style: "normal" },
+    { path: "../../fonts/tahrir/TahrirBold.woff2", weight: "700", style: "normal" },
+    { path: "../../fonts/tahrir/TahrirExtraBold.woff2", weight: "800", style: "normal" },
+    { path: "../../fonts/tahrir/TahrirBlack.woff2", weight: "900", style: "normal" },
+  ],
+  variable: "--font-tahrir",
+});
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -67,7 +79,7 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body className={`${YekanBakh.variable} font-sans antialiased`}>
+      <body className={`${YekanBakh.variable} ${Tahrir.variable} font-sans antialiased`}>
         <Analytics />
         <NextIntlClientProvider messages={messages}>
           {children}

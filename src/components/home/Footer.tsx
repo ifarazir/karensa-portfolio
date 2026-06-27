@@ -19,8 +19,6 @@ export default function Footer() {
 
   const studioLinks = [
     { href: "https://karensastudio.com/", label: t("nav.website") },
-    { href: "https://karensastudio.com/process", label: t("nav.process") },
-    { href: "https://karensastudio.com/contact", label: t("nav.contact") },
   ];
 
   return (
