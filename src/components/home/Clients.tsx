@@ -55,13 +55,13 @@ function dedupeBrands(brands: Brand[]): Brand[] {
 
 function Cell({ brand }: { brand: Brand }) {
   return (
-    <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8 dark:border-white/10 dark:bg-white/[0.04]">
+    <div className="group flex h-20 shrink-0 items-center justify-center rounded-lg border border-black/10 bg-white px-8 dark:border-white/10 dark:bg-stone-100">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={brand.logo}
         alt={brand.name}
         loading="lazy"
-        className="h-full max-h-10 w-auto object-contain opacity-50 brightness-0 transition duration-300 group-hover:opacity-100 dark:opacity-60 dark:brightness-0 dark:invert"
+        className="h-full max-h-10 w-auto object-contain opacity-60 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
       />
     </div>
   );
